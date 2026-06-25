@@ -42,7 +42,8 @@ body {
 /* 📜 ПРАВАЯ */
 .right {
   padding: 40px;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 /* 📌 КНОПКА */
@@ -203,6 +204,8 @@ button {
   }
 
   .right {
+    height: 100vh;
+    overflow-y: auto;
     padding: 15px;
     overflow-y: auto;
   }
@@ -335,6 +338,10 @@ function specialEvent() {
 
 secret.textContent = "✨ Вы нашли секретку!! ✨";
 secret.classList.add("show");
+  secret.scrollIntoView({
+  behavior: "smooth",
+  block: "nearest"
+});
 
   setTimeout(() => {
 
